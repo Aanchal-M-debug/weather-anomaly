@@ -1,13 +1,13 @@
 # Weather Anomaly Detection: Neural Network Comparison
 
-## 🎯 Project Overview
+## Project Overview
 
 This project demonstrates the effectiveness of **skip connections (residual connections)** in neural networks by comparing two architectures for weather anomaly detection:
 
 1. **Standard Feedforward Neural Network** - Traditional architecture
 2. **Skip Connection Neural Network** - ResNet-style architecture with residual connections
 
-## 📊 Dataset
+## Dataset
 
 ### Real Weather Data
 The system attempts to download real historical weather data (daily minimum temperatures from Melbourne, Australia). When successful, it uses actual temperature readings and generates correlated meteorological features.
@@ -25,7 +25,7 @@ The system attempts to download real historical weather data (daily minimum temp
 - Testing: 15% (300 samples)
 - Anomaly Ratio: 15%
 
-## 🧠 Neural Network Architectures
+## Neural Network Architectures
 
 ### Standard Neural Network
 ```
@@ -48,7 +48,19 @@ Input (5) → Projection(32)
 
 **Key Difference:** Skip connections allow gradients to flow directly through the network, bypassing intermediate layers. This helps prevent vanishing gradients and enables better training.
 
-## 🚀 Installation & Usage
+### Architecture Visualizations
+
+**Standard Neural Network Architecture:**
+
+![Standard NN Architecture](standard_nn_architecture.png)
+
+**Skip Connection Neural Network Architecture:**
+
+![Skip Connection NN Architecture](skip_connection_nn_architecture.png)
+
+*Note: Architecture diagrams are generated automatically if Graphviz is installed on your system.*
+
+## Installation & Usage
 
 ### Prerequisites
 ```bash
@@ -72,7 +84,7 @@ python weather_anomaly_demo.py
 - Optimizer: Adam
 - Loss Function: Binary Cross-Entropy
 
-## 📈 Results & Interpretation
+## Results & Interpretation
 
 ### Training Performance
 
@@ -150,7 +162,7 @@ python weather_anomaly_demo.py
 - **For Early Warning Systems:** 14% improvement in recall could save lives and property
 - **For Resource Planning:** Better anomaly detection enables proactive response
 
-## 📁 Generated Files
+## Generated Files
 
 After running the demo, you'll find:
 
@@ -161,7 +173,7 @@ After running the demo, you'll find:
 5. **skip_connection_nn_architecture.png** - Visual diagram of Skip Connection NN (if Graphviz installed)
 6. **weather_data.csv** - Downloaded real weather dataset
 
-## 🔬 Technical Details
+## Technical Details
 
 ### Why 250 Epochs?
 - Sufficient for both models to converge
@@ -181,7 +193,7 @@ If real data download fails, the system generates realistic synthetic data using
 - Identifies statistical outliers across all features
 - Maintains desired anomaly ratio (15%)
 
-## 🎓 Key Takeaways
+## Key Takeaways
 
 1. **Skip connections consistently outperform standard architectures**
    - Especially important for: recall (+14.2%), F1-score (+9.2%)
@@ -201,13 +213,13 @@ If real data download fails, the system generates realistic synthetic data using
    - Slightly longer training time per epoch
    - **Worth it:** Performance gains justify the cost
 
-## 📚 References
+## References
 
 - **ResNet Paper:** He et al., "Deep Residual Learning for Image Recognition" (2015)
 - **Skip Connections:** Enable training of very deep networks (100+ layers)
 - **Applications:** Image classification, object detection, time series, anomaly detection
 
-## 🛠️ Customization
+## Customization
 
 Modify these parameters in `weather_anomaly_demo.py`:
 
@@ -225,7 +237,7 @@ learning_rate = 0.001
 hidden_sizes = [32, 16, 8]
 ```
 
-## 📝 License
+## License
 
 This project is for educational and demonstration purposes.
 
