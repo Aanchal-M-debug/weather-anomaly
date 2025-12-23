@@ -1,0 +1,24 @@
+======================================================================
+WEATHER ANOMALY DETECTION - RESULTS SUMMARY
+======================================================================
+
+STANDARD NEURAL NETWORK RESULTS:
+  Accuracy:  0.9867
+  Precision: 1.0000
+  Recall:    0.8571
+  F1-Score:  0.9231
+  Final Training Loss: 0.0480
+  Final Validation Loss: 0.0444
+
+SKIP CONNECTION NEURAL NETWORK RESULTS:
+  Accuracy:  0.9800
+  Precision: 0.8667
+  Recall:    0.9286
+  F1-Score:  0.8966
+  Final Training Loss: 0.0407
+  Final Validation Loss: 0.0516
+
+PERFORMANCE IMPROVEMENT:
+  Accuracy Improvement: -0.67%
+  F1-Score Improvement: -2.65%
+======================================================================
